@@ -1,0 +1,20 @@
+<div class="question-list">
+  <% @questions.each do |question| %>
+    <div class="question-area">
+      <div class="question-item">
+          <div class="comment-box">
+            <h3 class="comment-id"><%= question.id %></h3>
+            <p class="comments">comments</p>
+          </div>
+        <div class="question-box">
+          <div class="question-title-box">
+            <p class="question-title"><%= question.title %></p>
+            <p class="question-name"><%= question.name %></p>
+          </div>
+          <p class="question-content"><%= question.content %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <%# <%= link_to "質問を投稿する", new_question_path %> 
+</div>
