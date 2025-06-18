@@ -143,3 +143,9 @@ body {
   margin-top: 20px;
   text-align: center;
 }
+
+
+/* 回答投稿画面 */
+.answer-form {
+  display: block;
+}
