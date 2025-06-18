@@ -2,11 +2,17 @@ class QuestionsController < ApplicationController
   def index
     @questions = Question.all
   end
-# Question.all確認済み
+
   def new
     @question = Question.new
   end
-# Question.new確認済み
+
+  def show
+    @question = Question.find(params[:id])
+    @answer = Answer.new
+    @answers = @question.answers
+  end
+
   def create
     @question = Question.new(question_params)
     if @question.save
